@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/material_dynamic_tertiary90" android:state_pressed="true"/>
+    <item android:drawable="@color/material_on_primary_emphasis_high_type" android:state_pressed="true"/>
+
+</selector>
