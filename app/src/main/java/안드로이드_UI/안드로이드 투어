@@ -1,0 +1,6 @@
+1.manifests
+-개요도 정도로 생각. , 우리가 만드는 앱의 설계도 정도로 생각.
+
+2.gradle
+-build.gradle(project)
+--build.gradle(module)
