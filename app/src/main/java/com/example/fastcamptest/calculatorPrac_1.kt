@@ -20,8 +20,10 @@ class calculatorPrac_1 : AppCompatActivity() {
     lateinit var plus : TextView
     lateinit var ca : TextView
     lateinit var result : TextView
+    lateinit var equal : TextView
 
-    var input : String = ""
+    var list = mutableListOf<String>()
+
     var tempo : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +32,53 @@ class calculatorPrac_1 : AppCompatActivity() {
 
         findViews()
         one.setOnClickListener {
-            input+=(it as TextView).text
+            result.append(one.text.toString())
+        }
+        two.setOnClickListener {
+            result.append(two.text.toString())
+        }
+        three.setOnClickListener {
+            result.append(three.text.toString())
+        }
+        four.setOnClickListener {
+            result.append(four.text.toString())
+        }
+        five.setOnClickListener {
+            result.append(five.text.toString())
+        }
+        six.setOnClickListener {
+            result.append(six.text.toString())
+        }
+        seven.setOnClickListener {
+            result.append(seven.text.toString())
+        }
+        eight.setOnClickListener {
+            result.append(eight.text.toString())
+        }
+        nine.setOnClickListener {
+            result.append(nine.text.toString())
+        }
+        zero.setOnClickListener {
+            result.append(zero.text.toString())
+        }
+        ca.setOnClickListener {
+            result.setText("")
+        }
+        plus.setOnClickListener {
+            result.append(plus.text.toString())
+        }
+        equal.setOnClickListener {
+            var input = 0
+            if(result.text.contains('+')){
+                var str = result.text.split('+')
+                for (i in 0.. str.size-1){
+                    list.add(str[i])
+                    input+=list.get(i).toInt()
+
+                }
+            }
+            result.text = input.toString()
+
         }
 
 
@@ -50,6 +98,6 @@ class calculatorPrac_1 : AppCompatActivity() {
         plus = findViewById(R.id.plus)
         ca = findViewById(R.id.CA)
         result = findViewById(R.id.result)
-
+        equal = findViewById(R.id.equal)
     }
 }

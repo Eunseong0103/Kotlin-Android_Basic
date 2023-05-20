@@ -4,6 +4,7 @@ println(numbers[0])
 println(numbers.get(1))
 println(numbers.indexOf(2))
 println(numbers.last())
+
 val number2 = mutableListOf<Int>(1,2,3)
 number2.add(50)
 println(number2)
